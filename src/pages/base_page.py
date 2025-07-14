@@ -53,3 +53,8 @@ class BasePage:
     def wait_disappear_overlay_scroll(self):
         self.wait_element_disappearing(MainPageLocators.OVERLAY_SCROLL)
 
+    @allure.step('Получаем URL страницы')
+    def get_current_url_page(self):
+        current_url = self.driver.current_url
+        return current_url
+

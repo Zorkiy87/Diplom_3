@@ -1,6 +1,7 @@
 import allure
 from src.pages.main_page import MainPage
 from src.pages.order_feed_page import OrderFeedPage
+from src.config import Urls
 
 
 class TestMainPage:
@@ -10,7 +11,7 @@ class TestMainPage:
         main_page.wait_disappear_overlay_scroll()
         main_page.click_log_in_button_account()
         main_page.click_constructor_header_button()
-        assert main_page.check_make_burger_title
+        assert main_page.get_current_url_page() == Urls.MAIN_URL
 
     @allure.title("Проверка перехода по клику на Ленту заказов")
     def test_go_to_feed_orders_list(self, driver):
