@@ -14,7 +14,6 @@ class OrderFeedPageLocators:
     TITLE_MODAL_WINDOW = By.XPATH, "//div[contains(@class, 'Modal_orderBox')]//h2"
     # Число заказов за всё время
     COUNT_ORDERS_ALL_TIME = By.XPATH, "//p[contains(., 'Выполнено за все время:')]/following-sibling::p[contains(@class, 'OrderFeed_number') and contains(@class, 'text_type_digits-large')]"
-    # COUNT_ORDERS_ALL_TIME = By.XPATH, "//p[text()='Выполнено за все время:']/following-sibling::p"
     # Число заказов за сегодня
     COUNT_ORDERS_TODAY = By.XPATH, "//p[text()='Выполнено за сегодня:']/following-sibling::p"
     # Заказы в обработке
